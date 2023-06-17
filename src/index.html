@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment System Project</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navigation"></nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <section class="content-section">
+
+                <div class="content__left"></div>
+
+                <div class="content__center">
+
+                    <div class="content__center_top-grid">
+                        <div class="content-item"></div>
+                        <div class="content-item"></div>
+                        <div class="content-item"></div>
+                        <div class="content-item"></div>
+                        <div class="content-item"></div>
+                        <div class="content-item"></div>
+                        <div class="content-item"></div>
+                        <div class="content-item"></div>
+                    </div>
+                    <div class="content__center_bigitem"></div>
+                    <div class="content__center_hr"></div>
+
+                    <section class="comment-section">
+                        <div class="comment-section_nav">
+                            <div class="comments-counter">
+                                <div class="comments-counter__text">
+                                    <span class="comments-counter__text_title" >Комментарии</span>
+                                    <span class="comments-counter__text_number" >(80)</span>
+                                </div>
+                                <div class="comments-counter__underline"></div>
+                            </div>
+
+                            <div class="filter">
+                                <div class="filter__select" name="" id="">
+                                    <button class="select-button">По дате</button>
+                                    <ul class="filter__select-list">
+                                        <li class="filter__select-list-item item-active" data-value="date">По дате</li>
+                                        <li class="filter__select-list-item" data-value="rating">По количеству оценок</li>
+                                        <li class="filter__select-list-item" data-value="reply">По количеству ответов</li> 
+                                    </ul>
+                                    <button class="filter-button_reverse">
+                                        <img class="filter-icon" src="./svg/triangle.svg" alt="triangle">
+                                    </button>
+                                </div>
+
+                                <div class="favorites">
+                                    <button class="filter-button filter-button_favorites">Избранное</button>
+                                    <img class="favorites-icon" src="./svg/heart filled in circle.svg" alt="heart-in-circle">
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                        <form class="comment-form" action="">
+                            <img class="comment-form__avatar-pic" src="https://img.freepik.com/free-photo/worldface-spanish-guy-in-a-white-background_53876-137665.jpg?w=826&t=st=1686301176~exp=1686301776~hmac=89bed9e677a725886b09213c3fbaa8ecc5685425ef26ac9eb22afde63a0f831b" alt="Max">
+                            <div class="comment-form__box">
+                                <div class="comment-form__box-top">
+                                    <img class="comment-form__avatar-pic-mobile" src="https://img.freepik.com/free-photo/worldface-spanish-guy-in-a-white-background_53876-137665.jpg?w=826&t=st=1686301176~exp=1686301776~hmac=89bed9e677a725886b09213c3fbaa8ecc5685425ef26ac9eb22afde63a0f831b" alt="Max">
+                                    <div class="comment-form__box-top-left">
+                                        <span class="comment-form__box-top-left_nickname">Алексей</span>
+                                        <span class="comment-form__box-top-left_info">Макс. 1000 символов</span>
+                                    </div>
+                                </div>
+                                <div class="comment-form__box-bottom">
+                                    <textarea id="input" class="comment-form__box-bottom_input" placeholder="Введите текст сообщения..."></textarea>
+                                    <div class="comment-form-submit">
+                                        <button class="comment-form__box-bottom_send-button" disabled>Отправить</button>
+                                        <span class="comment-form__box-top-right_error">Слишком длинное сообщение</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="comment-feed"></div>   
+
+                    </section>
+
+                </div>
+            </section>   
+        </div>
+    </main>
+
+    <template class="comment-template">
+
+        <div class="comment-template-item">   
+            <img class="comment-form__avatar-pic" src="" alt="avatar">
+            <div class="comment-form__box">
+                <div class="comment-form__box-top comment-feed__box-top">
+                    <img class="comment-feed__avatar-pic" src="" alt="avatar">
+                    <div class="comment-feed__box-top-left">
+                        <span class="comment-form__box-top-left_nickname comment-feed__box-top-left_nickname">Алексей_1994b</span>
+                        <span class="comment-form__box-top_date comment-feed__box-top_date">15.01 13:55</span>
+                    </div>
+                </div>
+                <div class="comment-form__box-bottom">
+                    <p class="comment-feed__text">
+                        Самое обидное когда сценарий по сути есть - в виде книг, где нет сюжетных дыр, всё логично,
+                        стройное повествование и достаточно взять и экранизировать оригинал как это было в первых
+                        фильмах с минимальным количеством отсебятины и зритель с восторгом примет любой такой фильм 
+                        и сериал, однако вместо этого 'Кольца власти' просто позаимствовали имена из оригинала, куски 
+                        истории, мало связанные между собой и выдали очередной среднячковый сериал на один раз в 
+                        лучшем случае.
+                    </p>
+                </div>
+
+                <div class="comment-feed__interact">
+                    <div class="comment-feed__interact_response">
+                        <button class="response-button">
+                            <img class="response-icon" src="./svg/answer-left.svg" alt="left-arrow">
+                        </button>
+                        <button class="response-button__text">Ответить</button>
+                    </div>
+                    <div class="comment-feed__interact_favorite">
+                        <button class="favorite-button">
+                            <img class="favorite-icon" src="./svg/heart empty.svg" alt="heart-empty">
+                        </button>
+                        <button class="favorite-button__text">В избранное</button>
+                    </div>
+                    <div class="comment-feed__interact_rating">
+                        <button class="rating-button rating-minus"><img class="rating-minus-icon" src="./svg/minus.svg" alt="minus"></button>
+                        <span class="rating-counter">0</span>
+                        <button class="rating-button rating-plus"><img class="rating-plus-icon" src="./svg/plus.svg" alt="plus"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+<script src="./index.js" type="module"></script>
+</body>
+</html>
