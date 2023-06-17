@@ -88,16 +88,14 @@ export default class CommentSection {
 
         filterSelectListItems.forEach((item) => {
             item.addEventListener('click', (evt) => {
-                if (!(evt.target instanceof HTMLElement)) {
-                    return;
-                }
+                const evtTarget = evt.target as HTMLInputElement;
 
                 filterSelectList.querySelector('.item-active')!.classList.remove('item-active');
-                evt.target.classList.add('item-active');
+                evtTarget.classList.add('item-active');
 
-                selectButton.textContent = evt.target.textContent;
+                selectButton.textContent = evtTarget.textContent;
 
-                this.currentSort = evt.target.dataset.value as typeof this.currentSort;
+                this.currentSort = evtTarget.dataset.value as typeof this.currentSort;
 
                 this.fromGreaterToLesser = true;
                 filterButtonReverseIcon.classList.remove('reversed');

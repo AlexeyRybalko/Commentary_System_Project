@@ -1,10 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const Commentary_1 = __importDefault(require("./Commentary"));
-class Reply extends Commentary_1.default {
+import Commentary from "./Commentary.js";
+export default class Reply extends Commentary {
     constructor(selectorTemplate, comment, repliedUser) {
         super(selectorTemplate, comment);
         this.repliedUser = repliedUser;
@@ -27,4 +22,3 @@ class Reply extends Commentary_1.default {
         this.item.querySelector('.comment-feed__interact_response').remove();
     }
 }
-exports.default = Reply;

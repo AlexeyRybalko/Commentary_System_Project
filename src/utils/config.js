@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.user = exports.comments = void 0;
 const comments = [
     {
         id: 0,
@@ -76,9 +73,8 @@ const comments = [
         avatar: 'https://img.freepik.com/free-photo/handsome-young-man-with-arms-crossed-on-white-background_23-2148222620.jpg?w=826&t=st=1686301125~exp=1686301725~hmac=55db8991c3e2c527a2a9f486be0e7e6ca8bd2cc0ed6e385f58318903c6cddd6a'
     },
 ];
-exports.comments = comments;
 const user = {
     nickname: 'Алексей',
     avatar: 'https://img.freepik.com/free-photo/worldface-spanish-guy-in-a-white-background_53876-137665.jpg?w=826&t=st=1686301176~exp=1686301776~hmac=89bed9e677a725886b09213c3fbaa8ecc5685425ef26ac9eb22afde63a0f831b',
 };
-exports.user = user;
+export { comments, user };

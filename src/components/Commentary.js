@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Commentary {
+export default class Commentary {
     constructor(selectorTemplate, comment, handleReply) {
         this.commentTemplate = document.querySelector(selectorTemplate);
         this.comment = comment;
@@ -153,4 +151,3 @@ class Commentary {
         this.changeRating();
     }
 }
-exports.default = Commentary;

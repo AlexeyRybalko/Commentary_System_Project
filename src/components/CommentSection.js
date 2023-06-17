@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class CommentSection {
+export default class CommentSection {
     constructor(comments, sectionSelector, createComment) {
         this.comments = JSON.parse(localStorage.getItem('comments')) || comments;
         this.commentSection = document.querySelector(sectionSelector);
@@ -67,13 +65,11 @@ class CommentSection {
         });
         filterSelectListItems.forEach((item) => {
             item.addEventListener('click', (evt) => {
-                if (!(evt.target instanceof HTMLElement)) {
-                    return;
-                }
+                const evtTarget = evt.target;
                 filterSelectList.querySelector('.item-active').classList.remove('item-active');
-                evt.target.classList.add('item-active');
-                selectButton.textContent = evt.target.textContent;
-                this.currentSort = evt.target.dataset.value;
+                evtTarget.classList.add('item-active');
+                selectButton.textContent = evtTarget.textContent;
+                this.currentSort = evtTarget.dataset.value;
                 this.fromGreaterToLesser = true;
                 filterButtonReverseIcon.classList.remove('reversed');
                 this.renderComments(this.sortComments());
@@ -86,4 +82,3 @@ class CommentSection {
         });
     }
 }
-exports.default = CommentSection;

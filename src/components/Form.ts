@@ -57,11 +57,7 @@ export default class Form {
         })
 
         this.input.addEventListener('input', (evt) => {
-            if (!(evt.target instanceof HTMLInputElement)) {
-                return;
-            }
-
-            const value = evt.target.value;
+            const value = (evt.target as HTMLInputElement).value;
 
             this.input.style.height = '0';
             this.input.style.height = this.input.scrollHeight + "px";

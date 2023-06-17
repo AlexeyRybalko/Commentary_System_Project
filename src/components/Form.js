@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Form {
+export default class Form {
     constructor(formSelector, user, handleSubmit) {
         this.formElement = document.querySelector(formSelector);
         this.user = user;
@@ -40,9 +38,6 @@ class Form {
             this.submitButton.disabled = true;
         });
         this.input.addEventListener('input', (evt) => {
-            if (!(evt.target instanceof HTMLInputElement)) {
-                return;
-            }
             const value = evt.target.value;
             this.input.style.height = '0';
             this.input.style.height = this.input.scrollHeight + "px";
@@ -65,4 +60,3 @@ class Form {
         });
     }
 }
-exports.default = Form;
