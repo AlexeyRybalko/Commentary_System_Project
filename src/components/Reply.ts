@@ -1,5 +1,5 @@
-import Commentary from "./Commentary";
-import { Comment } from "../index";
+import Commentary from "./Commentary.js";
+import { Comment } from "../index.js";
 
 export default class Reply extends Commentary {
     repliedUser: string;

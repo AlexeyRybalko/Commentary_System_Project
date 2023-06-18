@@ -1,4 +1,4 @@
-import { Comment } from "../index";
+import { Comment } from "../index.js";
 
 interface User {
     nickname: string,

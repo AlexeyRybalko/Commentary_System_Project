@@ -1,8 +1,8 @@
-import CommentSection from "./components/CommentSection";
-import { comments, user } from "./utils/config";
-import Commentary from "./components/Commentary";
-import Form from "./components/Form";
-import Reply from "./components/Reply";
+import CommentSection from "./components/CommentSection.js";
+import { comments, user } from "./utils/config.js";
+import Commentary from "./components/Commentary.js";
+import Form from "./components/Form.js";
+import Reply from "./components/Reply.js";
 
 const commentCounter = document.querySelector('.comments-counter__text_number') as Element;
 const form = new Form('.comment-form', user, handleCommentSubmit)
